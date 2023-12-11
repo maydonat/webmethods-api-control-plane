@@ -144,7 +144,7 @@ ILM (Index Lifecycle Management) policy is defined to manage the Elasticsearch d
 |**Cold Tier (20-30 Days)**|This tier includes data that is rarely accessed but is retained for compliance, backup, or archival purposes. <br> Data at this tier is intended for read-only purposes.|
 |**Delete Phase (>30 Days)**| This phase refers to data that has exceeded a predefined retention period and is scheduled for deletion. <br> Data longer than 30 days get deleted automatically.|
 
-For the ILM policy to work as defined in a cluster set up, the cluster health status must be **green
+For the ILM policy to work as defined in a cluster set up, the cluster health status must be **green**.
 
 
 ## API Control Plane Autoscaling
