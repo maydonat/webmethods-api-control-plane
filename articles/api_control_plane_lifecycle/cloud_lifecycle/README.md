@@ -6,32 +6,32 @@
 
 Table of contents
 
-1. [Where is API Control Plane Cloud hosted](#where-is-api-control-plane-cloud-hosted) 
-2. [How to subscribe for an API Control Plane tenant?](#how-to-subscribe-for-an-api-control-plane-tenant?)
+1. [Where is API Control Plane Cloud hosted?](#where-is-api-control-plane-cloud-hosted) 
+2. [How to subscribe for an API Control Plane tenant?](#how-to-subscribe-for-an-api-control-plane-tenant)
 3. [Provisioning steps by Cloudops](#provisioning-steps-by-cloudops)
 4. [SAG Cloud wiring](#sag-cloud-wiring)
 5. [Custom Domain](#custom-domain)
 6. [Certificate Management](#certificate-management)
-7. [What Gateways can be connected with API Control Plane?](#what-gateways-can-be-connected-with-api-control-plane?)
+7. [What Gateways can be connected with API Control Plane?](#what-gateways-can-be-connected-with-api-control-plane)
 8. [Functionalities](#functionalities)
 9. [User Management](#user-management)
 10. [API Control Plane decommissioning](#api-control-plane-decommissioning)
 11. [Data housekeeping](#data-housekeeping)
 12. [Autoscaling](#api-control-plane-autoscaling)
-13. [Backup Procedures](#api-control-plane-backup-procedures)
+13. [Backup Procedures](#backup-procedures)
 14. [Disaster Recovery](#disaster-recovery)
 15. [Configurations](#configurations)
 16. [Upgrade procedures](#upgrade-procedures)
 17. [Monitoring and Alerting](#monitoring-and-alerting)
-18. [Frequently Asked Questions](#frequently-asked-questions)
-19. [Troubleshooting Tips](#troubleshooting-tips)
+18. [FAQs](#faqs)
+19. [Troubleshooting Tips](#troubleshooting-tips)
 
 ***
 
 
 ## Where is API Control Plane Cloud hosted?
 
-Software AG provisions API Control Plane on the Software AG Cloud platform exclusively in the Azure West Europe region (Netherlands). Users registered with Software AG Cloud and having the required user roles assigned can access API Control Plane. See Software AG Cloud regions page for information on the available products, underlying infrastructure,  https://www.softwareag.cloud/site/regions.html
+Software AG provisions API Control Plane on the Software AG Cloud platform exclusively in the Azure West Europe region (Netherlands). Users registered with Software AG Cloud and having the required user roles assigned can access API Control Plane. See Software AG Cloud regions page for information on the available products and underlying infrastructure,  https://www.softwareag.cloud/site/regions.html
 
 For details about the IP addresses for API Control Plane in the Azure West Europe region, see https://docs.webmethods.io/softwareagcloud/allowed_ips/cloudproducts/#gsc.tab=0
 
@@ -84,7 +84,7 @@ The following predefined user groups can access API Control Plane:
 *	API platform providers
 *	API product managers
 
-Privileges based on the user groups:
+Privileges based on the user groups:<br>
 ![image](/attachments/users_privileges.png)
 ![image](/attachments/data_plane_privileges.png)
 ![image](/attachments/runtime_privileges.png)
@@ -139,9 +139,10 @@ ILM (Index Lifecycle Management) policy is defined to manage the Elasticsearch d
 
 |Tier name|Description|
 |-----|-----|
-|**Hot Tier (0-30 Days)**|This tier typically includes data that is frequently accessed and needs to be readily available for immediate use. <br> Data longer than **30** days are rolled over and moved to *Cold* tier. |
-|Cold Tier (>30 Days)|This tier includes data that is rarely accessed but is retained for compliance, backup, or archival purposes. <br> Data at this tier is intended for read-only purpose.|
-|**Delete Phase (45th Day)| This phase refers to data that has exceeded a predefined retention period and is scheduled for deletion. <br> On **45th** day, data gets deleted automatically.|
+|**Hot Tier (0-10 Days)**|This tier typically includes data that is frequently accessed and needs to be readily available for immediate use. <br> Data longer than **10** days are rolled over and moved to *Warm* tier. |
+|**Warm Tier (10-20 Days)**|This tier usually contains data that is accessed less frequently than hot tier but still requires relatively quick access. <br> Data longer than **20** days are rolled over and moved to *Cold* tier. |
+|**Cold Tier (20-30 Days)**|This tier includes data that is rarely accessed but is retained for compliance, backup, or archival purposes. <br> Data at this tier is intended for read-only purposes.|
+|**Delete Phase (>30 Days)**| This phase refers to data that has exceeded a predefined retention period and is scheduled for deletion. <br> Data longer than 30 days get deleted automatically.|
 
 For the ILM policy to work as defined in a cluster set up, the cluster health status must be **green
 
