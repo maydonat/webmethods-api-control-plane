@@ -27,7 +27,7 @@ Two common API Control Plane deployment models are:
 *	Single node deployment
 *	You can set up High availability solution for protection against single point of failure within a single data center or HADR (High Availability and Disaster Recovery) solution for protection from the failure of an entire data center.
 
-or details, see https://documentation.softwareag.com/wco/10.16.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-deployment.html%23
+For details, see https://documentation.softwareag.com/wco/10.16.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-deployment.html%23
 
 
 ## Licensing 
@@ -86,7 +86,7 @@ The following predefined user groups can access API Control Plane:
 *	API platform providers
 *	API product managers
 
-Privileges based on the user groups:
+Privileges based on the user groups:<br>
 ![image](/attachments/users_privileges.png)
 ![image](/attachments/data_plane_privileges.png)
 ![image](/attachments/runtime_privileges.png)
