@@ -17,9 +17,7 @@ You can deploy API Control Plane in the following ways:
 
 ![image](/attachments/cloud_deployment.png)
 
-***
-
 *	[API Control Plane on-premises life cycle](on_prem_lifecycle/README.md)
 *	[API Control Plane Clouc life cycle](cloud_lifecycle/README.md)
 
-***
+
