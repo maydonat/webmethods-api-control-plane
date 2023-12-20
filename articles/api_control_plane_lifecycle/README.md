@@ -79,16 +79,16 @@ This section serves as a comprehensive guide for understanding the entire provis
     
     For details on the privileges based on the user groups, see https://docs.webmethods.io/apicontrolplane/administration/chapter3wco#co-user_management
 
-16. What are the deployment models of API Control Plane?<br>
+17. What are the deployment models of API Control Plane?<br>
 
     Two common API Control Plane deployment models are:
 
     - Single node deployment
     - You can set up High availability solution for protection against single point of failure within a single data center or HADR (High Availability and Disaster Recovery) solution for protection from the failure of an         entire data center.
 
-17. Which license is necessary for deploying the on-prem version of API Control Plane?
+18. Which license is necessary for deploying the on-prem version of API Control Plane?
 
-18. How to deploy the on-prem version of API Control Plane?<br>
+19. How to deploy the on-prem version of API Control Plane?<br>
 
     API Control Plane can be deployed using:
 
@@ -96,29 +96,29 @@ This section serves as a comprehensive guide for understanding the entire provis
    
     - Helm: For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fta-deploy_standalone_apicp_docker.html%23
    
-19. How to connect API Gateway with API Control Plane?<br>
+20. How to connect API Gateway with API Control Plane?<br>
 
     For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-connecting-apigw.html%23
    
-20. What are the hardware and product configuration guidelines that are required to deploy API Control Plane to run at an optimal scale?<br>
+21. What are the hardware and product configuration guidelines that are required to deploy API Control Plane to run at an optimal scale?<br>
 
     See https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fre-resourcing_guidelines.html%23 for details.
 
-21. Where are the logs collected?<br>
+22. Where are the logs collected?<br>
 
     The logs are collected at the location /logs/.
 
-22. What is the process for log rotation in API Control Plane?<br>
+23. What is the process for log rotation in API Control Plane?<br>
 
     The rolling appender configuration creates logs based on time (daily) and file size (10MB). When a log file size reaches 10MB, a new log file is created, and the older log file is archived. Old log files are archived     in the directory LOGS/archived/microservice_name with a naming pattern that includes the date in the format yyyy-MM-dd. A maximum of 100 archived log files are retained. Once this limit is reached, older log files        are automatically purged to keep the log directory manageable.
 
     For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fta-configuring_log_levels.html%23
 
-23. How can a customer handle index management in API Control Plane?<br>
+24. How can a customer handle index management in API Control Plane?<br>
 
     ILM (Index Lifecycle Management) policy must be defined to manage the Elasticsearch data indices efficiently ensuring optimal data storage and retrieval.
 
-24.  Name the list of indices.
+25.  Name the list of indices.
 
      |Type of data|Indice name|
      |-----|-----|
@@ -129,7 +129,7 @@ This section serves as a comprehensive guide for understanding the entire provis
      |**Heartbeats**|.ds-cp_data_tenant_name_audit_events  |
 
 
-25. What are the index rollover stages in ILM implementation?<br>
+26. What are the index rollover stages in ILM implementation?<br>
 
     |Tier name|Description|
     |-----|-----|
@@ -145,7 +145,7 @@ This section serves as a comprehensive guide for understanding the entire provis
 
     For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-data_house_keeping.html%23
 
-26. Control plane autoscaling<br>
+27. Control plane autoscaling<br>
 
     Number of data planes?
 
@@ -158,19 +158,19 @@ This section serves as a comprehensive guide for understanding the entire provis
     Soak?
 
 
-27. How to manage data backups/snapshot to ensure data resiliency and disaster recovery?<br>
+28. How to manage data backups/snapshot to ensure data resiliency and disaster recovery?<br>
 
     For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-snapshot_management.html%23
 
-28. Does API Control Plane provide REST endpoints to monitor the health and resource utilization of the microservices and Elastic search?<br>
+29. Does API Control Plane provide REST endpoints to monitor the health and resource utilization of the microservices and Elastic search?<br>
 
     Yes. For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-monitor_apicp.html%23
 
-29. List the Prometheus metrics to analyze API Control Plane health.<br>
+30. List the Prometheus metrics to analyze API Control Plane health.<br>
 
     See https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-collect_microservices_metrics.html%23 for details.
 
-30. Is Open telemetry supported for tracing?<br>
+31. Is Open telemetry supported for tracing?<br>
 
     Yes. To deploy API Control Plane enabling Open Telemetry using Jaeger UI with Docker, perform *step 5* mentioned in
     https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fta-deploy_standalone_apicp_docker.html%23
