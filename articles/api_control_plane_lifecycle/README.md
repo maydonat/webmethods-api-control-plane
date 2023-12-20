@@ -191,6 +191,10 @@ This section serves as a comprehensive guide for understanding the entire provis
 
 1. How to enable on-prem logs?
 
+## References
+
+* Official On-prem documentation link: https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fto-landing_page.html%23
+* Official Cloud documentation link: https://docs.webmethods.io/apicontrolplane/welcome/home/#gsc.tab=0
 
     
 
