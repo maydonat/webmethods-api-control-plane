@@ -172,8 +172,8 @@ This section serves as a comprehensive guide for understanding the entire provis
 
 30. Is Open telemetry supported for tracing?<br>
 
-    Yes. To deploy API Control Plane enabling Open Telemetry using Jaeger UI with Docker, perform *step 5* mentioned in https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fta-      
-    deploy_standalone_apicp_docker.html%23
+    Yes. To deploy API Control Plane enabling Open Telemetry using Jaeger UI with Docker, perform *step 5* mentioned in
+    https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fta-deploy_standalone_apicp_docker.html%23
 
 
 ## FAQ's
