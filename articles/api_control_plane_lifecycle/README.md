@@ -14,6 +14,7 @@ This section serves as a comprehensive guide for understanding the entire provis
    - On-premises. You can deploy API Control Plane using docker or helm.
 
 3. Where is API Control Plane hosted?
+   Software AG provisions API Control Plane on the Software AG Cloud platform exclusively in the Azure West Europe region (Netherlands). 
 
 4. 
 
