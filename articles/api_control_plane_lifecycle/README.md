@@ -13,7 +13,7 @@ This section serves as a comprehensive guide for understanding the entire provis
       - *Private Cloud*. If you prefer to deploy API Control Plane in your private cloud environment, you have the flexibility to choose between running the application in docker containers or kubernetes.
    - On-premises. You can deploy API Control Plane using docker or helm.
 
-3. Where is API Control Plane hosted?
+3. Where is API Control Plane hosted?<br>
 
    Software AG provisions API Control Plane on the Software AG Cloud platform exclusively in the Azure West Europe region (Netherlands). 
 
