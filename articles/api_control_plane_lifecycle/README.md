@@ -174,7 +174,22 @@ This section serves as a comprehensive guide for understanding the entire provis
     deploy_standalone_apicp_docker.html%23
 
 
-31. 
+## FAQ's
+
+1. How do I add an additional Gateway?
+
+
+2. How do I report an incident?<br>
+
+   You can report an incident through our Service Portal, [JSM](https://getsupport.softwareag.com/)
+
+
+## Troubleshooting Tips
+
+
+1. How to enable on-prem logs?
+
+
     
 
 
