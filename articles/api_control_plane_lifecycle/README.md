@@ -40,11 +40,11 @@ This section serves as a comprehensive guide for understanding the entire provis
    
 
 11. What Gateways are supported?<br>
-   API Control Plane currently supports connectivity with API Gateway version, 10.15 Fix 10 (10.15.0.10) and above, provisioned by Software AG Cloud. 
+    API Control Plane currently supports connectivity with API Gateway version, 10.15 Fix 10 (10.15.0.10) and above, provisioned by Software AG Cloud. 
 
-   - **API Control Plane Cloud** -  Supports connectivity with API Gateway deployed in SAG Cloud and On-premises.
+    * **API Control Plane Cloud** -  Supports connectivity with API Gateway deployed in SAG Cloud and On-premises.
   
-   - **API Control Plane On-premises** - Supports connectivity with API Gateway deployed in On-premises.
+    * **API Control Plane On-premises** - Supports connectivity with API Gateway deployed in On-premises.
   
 
 12. Is SAG Cloud responsible for connecting your Gateways with API Control Plane?
