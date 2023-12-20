@@ -46,10 +46,10 @@ This section serves as a comprehensive guide for understanding the entire provis
 
 12. What are the deployment models of API Control Plane?<br>
 
-   Two common API Control Plane deployment models are:
+    Two common API Control Plane deployment models are:
 
-   - Single node deployment
-   - You can set up High availability solution for protection against single point of failure within a single data center or HADR (High Availability and Disaster Recovery) solution for protection from the failure of an         entire data center.
+    - Single node deployment
+    - You can set up High availability solution for protection against single point of failure within a single data center or HADR (High Availability and Disaster Recovery) solution for protection from the failure of an         entire data center.
 
 13. Which license is necessary for deploying the on-prem version of API Control Plane?
 
