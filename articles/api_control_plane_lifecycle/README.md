@@ -32,26 +32,26 @@ This section serves as a comprehensive guide for understanding the life cycle of
 
    No downtime.
 
-9. How are the upgrade notifications communicated to the customers?<br>
+7. How are the upgrade notifications communicated to the customers?<br>
 
    Upgrade notifications are sent through the [Status page](https://status.webmethods.io/) and e-mails. The status page has information on major releases, hotfixes, and patch releases including the latest statistics on      cloud environments availability, incident history, and planned maintenance events.
    
-10. How are Rollback procedures handled?
+8. How are Rollback procedures handled?
 
     In terms of failure during the upgrade process, Software AG Cloud handles the rollback procedure.
    
-11. What Gateways are supported?<br>
+9. What Gateways are supported?<br>
     API Control Plane currently supports connectivity with Software AG, API Gateway version 10.15 Fix 10 (10.15.0.10) and above.  
 
-12. Can the domain name of API Control Plane tenant be customized?
+10. Can the domain name of API Control Plane tenant be customized?
 
     Yes. Create a support ticket for a custom domain.
 
-15. How are the certificates managed?
+11. How are the certificates managed?
 
     Software AG Cloud Ops handles the certificate management. Create a support ticket if you have a requirement. 
 
-17. How are the users managed?<br>
+12. How are the users managed?<br>
 
     **User Management in Software AG Cloud**
 
@@ -71,13 +71,13 @@ This section serves as a comprehensive guide for understanding the life cycle of
     
     For details on the privileges based on the user groups, see https://docs.webmethods.io/apicontrolplane/administration/chapter3wco#co-user_management
 
-18. What is the deployment model of API Control Plane?<br>
+13. What is the deployment model of API Control Plane?<br>
 
     API Control Plane can be deployed using High availability solution for protection against single point of failure within a single data center or HADR (High Availability and Disaster Recovery) solution for protection      from the failure of an entire data center.
 
-19. Which license is necessary for deploying the on-prem version of API Control Plane?
+14. Which license is necessary for deploying the on-prem version of API Control Plane?
 
-20. How to deploy the on-prem version of API Control Plane?<br>
+15. How to deploy the on-prem version of API Control Plane?<br>
 
     API Control Plane can be deployed using:
 
@@ -85,40 +85,27 @@ This section serves as a comprehensive guide for understanding the life cycle of
    
     - Helm: For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fta-deploy_standalone_apicp_docker.html%23
    
-21. How to connect API Gateway with API Control Plane?<br>
+16. How to connect API Gateway with API Control Plane?<br>
 
     For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-connecting-apigw.html%23
    
-22. What are the hardware and product configuration guidelines that are required to deploy API Control Plane to run at an optimal scale?<br>
+17. What are the hardware and product configuration guidelines that are required to deploy API Control Plane to run at an optimal scale?<br>
 
     See https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fre-resourcing_guidelines.html%23 for details.
 
-28. Control plane autoscaling<br>
-
-    Number of data planes?
-
-    Number of runtimes?
-
-    Transaction limit?
-
-    Chaos??
-
-    Soak?
-
-
-29. How to manage data backups/snapshot to ensure data resiliency and disaster recovery?<br>
+18. How to manage data backups/snapshot to ensure data resiliency and disaster recovery?<br>
 
     For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-snapshot_management.html%23
 
-30. Does API Control Plane provide REST endpoints to monitor the health and resource utilization of the microservices and Elastic search?<br>
+19. Does API Control Plane provide REST endpoints to monitor the health and resource utilization of the microservices and Elastic search?<br>
 
     Yes. For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-monitor_apicp.html%23
 
-31. List the Prometheus metrics to analyze API Control Plane health.<br>
+20. List the Prometheus metrics to analyze API Control Plane health.<br>
 
     See https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-collect_microservices_metrics.html%23 for details.
 
-32. Is Open telemetry supported for tracing?<br>
+21. Is Open telemetry supported for tracing?<br>
 
     Yes. To deploy API Control Plane enabling Open Telemetry using Jaeger UI with Docker, perform *step 5* mentioned in
     https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fta-deploy_standalone_apicp_docker.html%23
