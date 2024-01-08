@@ -88,29 +88,31 @@ This section serves as a comprehensive guide for understanding the life cycle of
 16. How to connect API Gateway with API Control Plane?<br>
 
     For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-connecting-apigw.html%23
+
+    To connect API Control Plane using API Gateway UI, see *Configuring API Control Plane* section in *API Gateway Administration* guide.
    
-17. What are the hardware and product configuration guidelines that are required to deploy API Control Plane to run at an optimal scale?<br>
+18. What are the hardware and product configuration guidelines that are required to deploy API Control Plane to run at an optimal scale?<br>
 
     See https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fre-resourcing_guidelines.html%23 for details.
 
-18. How to manage data backups/snapshot to ensure data resiliency and disaster recovery?<br>
+19. How to manage data backups/snapshot to ensure data resiliency and disaster recovery?<br>
 
     For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-snapshot_management.html%23
 
-19. Does API Control Plane provide REST endpoints to monitor the health and resource utilization of the microservices and Elastic search?<br>
+20. Does API Control Plane provide REST endpoints to monitor the health and resource utilization of the microservices and Elastic search?<br>
 
     Yes. For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-monitor_apicp.html%23
 
-20. List the Prometheus metrics to analyze API Control Plane health.<br>
+21. List the Prometheus metrics to analyze API Control Plane health.<br>
 
     See https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-collect_microservices_metrics.html%23 for details.
 
-21. Is Open telemetry supported for tracing?<br>
+22. Is Open telemetry supported for tracing?<br>
 
     Yes. To deploy API Control Plane enabling Open Telemetry using Jaeger UI with Docker, perform *step 5* mentioned in
     https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fta-deploy_standalone_apicp_docker.html%23
 
-22. Can Gainsight be integrated with API Control Plane?
+23. Can Gainsight be integrated with API Control Plane?
 
     Yes. You can integrate Gainsight with API Control Plane Cloud for user engagements such as bots, articles, feature introduction, etc.. For details, see https://github.com/Kirthi08/webmethods-api-control- 
     plane/tree/main/deployment/docker#additional-deployment-flavors
