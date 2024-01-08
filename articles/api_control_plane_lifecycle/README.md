@@ -1,6 +1,6 @@
-## Assessment Questionnaire: Is API Control Plane Suitable for Your Needs?
+## All about API Control Plane
 
-This section serves as a comprehensive guide for understanding the entire provisioning life cycle and onboarding process for both self-hosted and cloud customers.
+This section serves as a comprehensive guide for understanding the life cycle of API Control Plane.
 
 1. What is webMethods API Control Plane?
 
@@ -28,38 +28,30 @@ This section serves as a comprehensive guide for understanding the entire provis
 
    API Control Plane tenants are automatically upgraded to the latest version by Software AG Cloud.
 
-6. What are the Provisioning steps that Cloudops follows when a customer requests for an API Control Plane tenant?<br>
+6. What is the downtime for the upgrade process?
 
-7. Schedules?
-
-8. Downtime?
+   No downtime.
 
 9. How are the upgrade notifications communicated to the customers?<br>
 
    Upgrade notifications are sent through the [Status page](https://status.webmethods.io/) and e-mails. The status page has information on major releases, hotfixes, and patch releases including the latest statistics on      cloud environments availability, incident history, and planned maintenance events.
    
-10. Rollback procedures?
+10. How are Rollback procedures handled?
+
+    In terms of failure during the upgrade process, Software AG Cloud handles the rollback procedure.
    
-
 11. What Gateways are supported?<br>
-    API Control Plane currently supports connectivity with API Gateway version, 10.15 Fix 10 (10.15.0.10) and above, provisioned by Software AG Cloud. 
+    API Control Plane currently supports connectivity with Software AG, API Gateway version 10.15 Fix 10 (10.15.0.10) and above.  
 
-    * **API Control Plane Cloud** -  Supports connectivity with API Gateway deployed in SAG Cloud and On-premises.
-  
-    * **API Control Plane On-premises** - Supports connectivity with API Gateway deployed in On-premises.
-  
+12. Can the domain name of API Control Plane tenant be customized?
 
-12. Is SAG Cloud responsible for connecting your Gateways with API Control Plane?
-    
+    Yes. Create a support ticket for a custom domain.
 
+15. How are the certificates managed?
 
-13. Can the domain name of API Control Plane tenant be customized?
+    Software AG Cloud Ops handles the certificate management. Create a support ticket if you have a requirement. 
 
-
-14. Certificate management?
-
-
-15. How are the users managed?<br>
+17. How are the users managed?<br>
 
     **User Management in Software AG Cloud**
 
@@ -79,16 +71,13 @@ This section serves as a comprehensive guide for understanding the entire provis
     
     For details on the privileges based on the user groups, see https://docs.webmethods.io/apicontrolplane/administration/chapter3wco#co-user_management
 
-17. What are the deployment models of API Control Plane?<br>
+18. What is the deployment model of API Control Plane?<br>
 
-    Two common API Control Plane deployment models are:
+    API Control Plane can be deployed using High availability solution for protection against single point of failure within a single data center or HADR (High Availability and Disaster Recovery) solution for protection      from the failure of an entire data center.
 
-    - Single node deployment
-    - You can set up High availability solution for protection against single point of failure within a single data center or HADR (High Availability and Disaster Recovery) solution for protection from the failure of an         entire data center.
+19. Which license is necessary for deploying the on-prem version of API Control Plane?
 
-18. Which license is necessary for deploying the on-prem version of API Control Plane?
-
-19. How to deploy the on-prem version of API Control Plane?<br>
+20. How to deploy the on-prem version of API Control Plane?<br>
 
     API Control Plane can be deployed using:
 
@@ -96,56 +85,15 @@ This section serves as a comprehensive guide for understanding the entire provis
    
     - Helm: For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fta-deploy_standalone_apicp_docker.html%23
    
-20. How to connect API Gateway with API Control Plane?<br>
+21. How to connect API Gateway with API Control Plane?<br>
 
     For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-connecting-apigw.html%23
    
-21. What are the hardware and product configuration guidelines that are required to deploy API Control Plane to run at an optimal scale?<br>
+22. What are the hardware and product configuration guidelines that are required to deploy API Control Plane to run at an optimal scale?<br>
 
     See https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fre-resourcing_guidelines.html%23 for details.
 
-22. Where are the logs collected?<br>
-
-    The logs are collected at the location /logs/.
-
-23. What is the process for log rotation in API Control Plane?<br>
-
-    The rolling appender configuration creates logs based on time (daily) and file size (10MB). When a log file size reaches 10MB, a new log file is created, and the older log file is archived. Old log files are archived     in the directory LOGS/archived/microservice_name with a naming pattern that includes the date in the format yyyy-MM-dd. A maximum of 100 archived log files are retained. Once this limit is reached, older log files        are automatically purged to keep the log directory manageable.
-
-    For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fta-configuring_log_levels.html%23
-
-24. How can a customer handle index management in API Control Plane?<br>
-
-    ILM (Index Lifecycle Management) policy must be defined to manage the Elasticsearch data indices efficiently ensuring optimal data storage and retrieval.
-
-25.  Name the list of indices.
-
-     |Type of data|Indice name|
-     |-----|-----|
-     |**Assets**|tenant_name_assets |
-     |**UMC**|api_tenant_name_umc <br> api_master_umc |
-     |**Metrics**|.ds-cp_monitoring_data_tenant_name_runtime_metrics <br> .ds-cp_monitoring_job_meta_data_tenant_name_metrics_payload <br> .ds-cp_monitoring_job_meta_data_tenant_name |
-     |**Heartbeats**|.ds-cp_monitoring_data_tenant_name_runtime_heartbeats  |
-     |**Heartbeats**|.ds-cp_data_tenant_name_audit_events  |
-
-
-26. What are the index rollover stages in ILM implementation?<br>
-
-    |Tier name|Description|
-    |-----|-----|
-    |**Hot Tier (0-10 Days)**|This tier typically includes data that is frequently accessed and needs to be readily available for immediate use. <br> Data longer than **10** days are rolled over and moved to *Warm* tier.     |
-    |**Warm Tier (10-20 Days)**|This tier usually contains data that is accessed less frequently than hot tier but still requires relatively quick access. <br> Data longer than **20** days are rolled over and moved to 
-    *Cold* tier. |
-    |**Cold Tier (20-30 Days)**|This tier includes data that is rarely accessed but is retained for compliance, backup, or archival purposes. <br> Data at this tier is intended for read-only purposes.|
-    |**Delete Phase (>30 Days)**| This phase refers to data that has exceeded a predefined retention period and is scheduled for deletion. <br> Data longer than 30 days get deleted automatically.|
-
-    For the ILM policy to work as defined in a cluster setup, the cluster health status must be **green**.
-
-    **Cloud**: Logs older than **30** days are purged in Cloud and cannot be retrieved to ensure proper housekeeping.
-
-    For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-data_house_keeping.html%23
-
-27. Control plane autoscaling<br>
+28. Control plane autoscaling<br>
 
     Number of data planes?
 
@@ -158,19 +106,19 @@ This section serves as a comprehensive guide for understanding the entire provis
     Soak?
 
 
-28. How to manage data backups/snapshot to ensure data resiliency and disaster recovery?<br>
+29. How to manage data backups/snapshot to ensure data resiliency and disaster recovery?<br>
 
     For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-snapshot_management.html%23
 
-29. Does API Control Plane provide REST endpoints to monitor the health and resource utilization of the microservices and Elastic search?<br>
+30. Does API Control Plane provide REST endpoints to monitor the health and resource utilization of the microservices and Elastic search?<br>
 
     Yes. For details, see https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-monitor_apicp.html%23
 
-30. List the Prometheus metrics to analyze API Control Plane health.<br>
+31. List the Prometheus metrics to analyze API Control Plane health.<br>
 
     See https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fco-collect_microservices_metrics.html%23 for details.
 
-31. Is Open telemetry supported for tracing?<br>
+32. Is Open telemetry supported for tracing?<br>
 
     Yes. To deploy API Control Plane enabling Open Telemetry using Jaeger UI with Docker, perform *step 5* mentioned in
     https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fta-deploy_standalone_apicp_docker.html%23
@@ -178,18 +126,10 @@ This section serves as a comprehensive guide for understanding the entire provis
 
 ## FAQ's
 
-1. How do I add an additional Gateway?
-
-
-2. How do I report an incident?<br>
+1. How do I report an incident?<br>
 
    You can report an incident through our Service Portal, [JSM](https://getsupport.softwareag.com/)
 
-
-## Troubleshooting Tips
-
-
-1. How to enable on-prem logs?
 
 ## References
 
