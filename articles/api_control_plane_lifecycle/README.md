@@ -110,6 +110,11 @@ This section serves as a comprehensive guide for understanding the life cycle of
     Yes. To deploy API Control Plane enabling Open Telemetry using Jaeger UI with Docker, perform *step 5* mentioned in
     https://documentation.softwareag.com/wco/11.0.0/en/webhelp/wco-webhelp/#page/wco-webhelp%2Fta-deploy_standalone_apicp_docker.html%23
 
+22. Can Gainsight be integrated with API Control Plane?
+
+    Yes. You can integrate Gainsight with API Control Plane Cloud for user engagements such as bots, articles, feature introduction, etc.. For details, see https://github.com/Kirthi08/webmethods-api-control- 
+    plane/tree/main/deployment/docker#additional-deployment-flavors
+
 
 ## FAQ's
 
