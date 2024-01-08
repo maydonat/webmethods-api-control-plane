@@ -19,7 +19,7 @@ This section serves as a comprehensive guide for understanding the life cycle of
 
    Software AG provisions API Control Plane on the Software AG Cloud platform exclusively in the *Azure West Europe* region (Netherlands).
 
-4. How can a customer provision a new API Control Plane tenant?<br>
+4. How can a customer request a new API Control Plane tenant?<br>
 
    webMethods.io API Control Plane is available only for enterprise customers. webMethods.io API Control Plane tenants are provisioned to enterprise customers upon request. Contact Software AG support if you wish to       
    subscribe to API Control Plane.
