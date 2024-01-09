@@ -116,8 +116,8 @@ This section serves as a comprehensive guide for understanding the life cycle of
 
 22. Can Gainsight be integrated with API Control Plane?
 
-    Yes. You can integrate Gainsight with API Control Plane Cloud for user engagements such as bots, articles, feature introduction, etc.. For details, see https://github.com/Kirthi08/webmethods-api-control- 
-    plane/tree/main/deployment/docker#additional-deployment-flavors
+    Yes. You can integrate Gainsight with API Control Plane Cloud for user engagements such as bots, articles, feature introduction, etc.. For details, see [https://github.com/Kirthi08/webmethods-api-control- 
+    plane/tree/main/deployment/docker#additional-deployment-flavors](https://github.com/SoftwareAG/webmethods-api-control-plane/tree/main/deployment/docker#additional-deployment-flavors)
 
 
 ## FAQ's
